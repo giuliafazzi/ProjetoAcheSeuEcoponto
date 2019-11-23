@@ -1532,11 +1532,29 @@ a.btn:focus {
   display: none;
 }
 
+#filters {
+  text-align: center;
+}
+
+#filters a:after {
+  font-family: FontAwesome;
+  font-size: 16px;
+  content: "\f056";
+}
+
+#filters a.collapsed:after {
+  content: "\f055";
+}
+
 /*
 *
 *   MAPA
 *
 */
+
+#cardMap {
+  height: 100%;
+}
 
 #map {
   width: 100%;
