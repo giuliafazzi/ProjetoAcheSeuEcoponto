@@ -8,7 +8,7 @@ html {
 
 body {
   font-size: 0.9rem;
-  background-color: #efefef;
+  background-color: #ffffff;
   padding-bottom: 50px;
 }
 
@@ -635,11 +635,16 @@ body.adminbody .main-sidebar.left {
   left: 70px;
 }
 #main.enlarged #sidebar-menu ul ul {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: 10px rgba(0, 0, 0, 0.4);
 }
 #main.enlarged .left.main-sidebar {
   width: 70px;
   z-index: 5;
+}
+
+.left.main-sidebar {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+  /*border: 1px solid rgba(183, 183, 183, 0.25);*/
 }
 #main.enlarged .left.main-sidebar #sidebar-menu > ul > li > a {
   padding-left: 10px;
@@ -1533,12 +1538,31 @@ a.btn:focus {
 *
 */
 
+.info {
+  margin-bottom: 5px;
+}
+
+#endereco {
+  font-weight: 400;
+}
+
+#alter {
+  color: #999;
+  font-size: 12px;
+  padding: 0 3px 0 3px;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  background-color: transparent;
+}
+
 .check-filter {
   display: none;
 }
 
 #filters {
   text-align: center;
+  min-height: 100% !important;
 }
 
 #filters a:after {
@@ -1573,6 +1597,12 @@ a.btn:focus {
 *
 */
 .btn {
+  border-radius: 1em;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+}
+
+.select2-container--default .select2-selection--multiple {
   border-radius: 1em;
   -moz-border-radius: 1em;
   -webkit-border-radius: 1em;
