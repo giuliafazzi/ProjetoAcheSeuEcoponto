@@ -48,7 +48,7 @@
 			<ul>
 			
 				<li class="submenu" id="imgLogo">
-					<a href="#">
+					<a href="index.html">
 						<img src="assets/images/logo.png" />
 					</a>
 				</li>
@@ -56,11 +56,11 @@
 				<hr />
 			
 				<li class="active submenu">
-					<a href="charts.html"><i class="fa fa-fw fa-search"></i><span> Buscar empresas </span> </a>
+					<a href="index.html"><i class="fa fa-fw fa-search"></i><span> Buscar empresas </span> </a>
 				</li>
 			
 				<li class="submenu">
-					<a href="#"><i class="fa fa-fw fa-thumbtack"></i> <span> Buscar Ecopontos </span></a>
+					<a href="#"><i class="fa fa-fw fa-thumb-tack"></i> <span> Buscar Ecopontos </span></a>
 				</li>
 			
 				<li class="submenu">
@@ -120,7 +120,7 @@
 							
 								<!-- filtros -->
 								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-3 no-pdd" id="filters">						
-									<div class="card mb-3">
+									<div class="card mb-3" id="right-filters">
 											<div class="card-header">
 												<i class="fa fa-fw fa-map-marker"></i>
 												<p class="info">Você está em</p>
@@ -247,7 +247,7 @@
 															<div id="collapseThree" class="collapse show" role="tabpanel" aria-labelledby="headingThree"
 																data-parent="#accordion3">
 																<div class="card-body">
-																	<div class="col-sm-10 col-xs-12">
+																	<div class="col-sm-10 col-xs-12" id="col_slider">
 																		<input type="text" id="range_slider_1">
 																	</div>
 																</div>
@@ -272,15 +272,17 @@
 																data-parent="#accordion4">
 																<div class="card-body">
 																	<div class="form-row">
-																		<div class="form-group col-md-6">
+																		<div class="form-group col-md-4">
 																			<input type="text" class="form-control" id="inputCity">
 																		</div>
-																		<select id="inputState" class="form-control">
-																			<option selected>grama(s)</option>
-																			<option>quilo(s)</option>
-																			<option>tonelada(s)</option>
-																			<option>litro(s)</option>
-																		</select>
+																		<div class="form-group col-md-8">
+																			<select id="inputState" class="form-control">
+																				<option selected>grama(s)</option>
+																				<option>quilo(s)</option>
+																				<option>tonelada(s)</option>
+																				<option>litro(s)</option>
+																			</select>
+																		</div>
 																	</div>
 																</div>
 															</div>
