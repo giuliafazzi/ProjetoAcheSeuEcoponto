@@ -440,6 +440,17 @@ a {
   position: absolute;
 }
 
+#filters {
+  top: 0px;
+  z-index: 1000;
+  color: #444444;
+  bottom: 70px;
+  margin-top: 0;
+  position: absolute;
+  right: 0;
+  width: 22.5%;
+}
+
 .content-page {
   margin-left: 250px;
   overflow: hidden;
