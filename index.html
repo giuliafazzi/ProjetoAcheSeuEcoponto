@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-		<title>Pike Admin - Free Bootstrap 4 Admin Template</title>
-		<meta name="description" content="Free Bootstrap 4 Admin Theme | Pike Admin">
-		<meta name="author" content="Pike Web Development - https://www.pikephp.com">
+		<title>Portal AcheSeuEcoponto</title>
 		
 		<link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
 		<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
@@ -105,11 +103,11 @@
             
 			<div class="container-fluid" style="height: 100%;" id="contMap">	
 							<div class="row no-pdd" style="height: 100%;">
-								<!-- mapa -->	
 								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-9 no-pdd" id="divMapa">						
 									
 									<button class="btn btn-primary" id="btnLista"><i class="fa fa-list"></i></button>
-
+									
+										<!-- mapa -->	
 										<div class="card mb-3" id="cardMap">
 											
 											<div class="card-body">
@@ -119,7 +117,21 @@
 												</div>
 												
 											</div>														
-										</div><!-- end card-->	
+										</div><!-- end card-->
+										
+										<!-- lista -->
+										<div class="card-body" id="cardList">
+										
+											<div class="card cr-empresa" style="width: 20rem;">
+												<div class="card-body">
+													<h4 class="card-title">Nome da Empresa</h4>
+													<h6 class="card-subtitle mb-2 text-muted">Endereço</h6>
+													<p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+														card's content.</p>
+												</div>
+											</div>
+										
+										</div><!-- end card-->
 								</div>
 							
 							
@@ -378,6 +390,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 	<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+	<script type="text/javascript" src="assets/js/script.js"></script>
 
 	<!-- Counter-Up-->
 	<script src="assets/plugins/waypoints/lib/jquery.waypoints.min.js"></script>

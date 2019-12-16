@@ -437,7 +437,7 @@ a {
   margin-bottom: -70px;
   margin-top: 0;
   padding-bottom: 70px;
-  position: absolute;
+  position: fixed !important;
 }
 
 #filters {
@@ -1629,6 +1629,24 @@ a.btn:focus {
   width: 100% !important;
 }
 
+.irs--flat .irs-bar,
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single,
+.irs--flat .irs-handle > i:first-child {
+  background-color: #0f9df7 !important;
+}
+
+.irs--flat .irs-from:before,
+.irs--flat .irs-to:before,
+.irs--flat .irs-single:before {
+  border-top-color: #0f9df7 !important;
+}
+
+.col-sm-10 {
+  max-width: 100%;
+}
+
 /*
 *
 *   MAPA
@@ -1670,6 +1688,14 @@ a.btn:focus {
   position: fixed;
   color: #fff;
   z-index: 1000;
+}
+
+#divMapa {
+  background-color: #f7f7f7;
+}
+
+.cr-empresa {
+  width: 100% !important;
 }
 
 /*
