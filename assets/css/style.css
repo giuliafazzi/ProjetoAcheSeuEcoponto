@@ -8,7 +8,7 @@ html {
 
 body {
   font-size: 0.9rem;
-  background-color: #ffffff;
+  background-color: #fafafa;
   padding-bottom: 50px;
 }
 
@@ -592,7 +592,7 @@ body.adminbody .main-sidebar.left {
 #sidebar-menu > ul > li > a {
   color: #444444;
   display: block;
-  padding: 12px 12px 15px 12px;
+  padding: 15px 12px 15px 12px;
   font-weight: 400;
   font-size: 0.9rem;
   border-left: 2px solid transparent;
@@ -616,7 +616,6 @@ body.adminbody .main-sidebar.left {
   margin-left: 3px;
   margin-right: 15px;
   text-align: center;
-  vertical-align: middle;
   width: 20px;
 }
 #sidebar-menu ul li a .drop-arrow {
@@ -1732,4 +1731,39 @@ a.btn:focus {
 */
 .no-pdd {
   padding: 0px !important;
+}
+
+.cnt .card-header {
+  padding: 2.5rem 2.5rem 1rem 2.5rem;
+  background-color: #fafafa;
+  border-bottom: none;
+}
+
+.cnt .card-body {
+  padding: 1rem 2.5rem 1.5rem 2.5rem;
+  background-color: #fafafa;
+}
+
+.clps .card-header,
+.clps .card-body {
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.clps .card-body {
+  padding-top: 0.15rem;
+}
+
+.clps .card {
+  box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.05);
+}
+
+.card-header h3 {
+  font-weight: 400;
+}
+
+.resposta {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
 }
