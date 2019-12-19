@@ -1680,7 +1680,7 @@ a.btn:focus {
 #divMapa {
   height: 100%;
   position: fixed;
-  /*width: 77.5% !important;*/
+  width: calc(77.5% - 230px) !important;
 }
 
 /*
@@ -1701,6 +1701,10 @@ a.btn:focus {
 
 #divMapa {
   background-color: #f7f7f7;
+}
+
+#cardList {
+  padding: 2rem;
 }
 
 .cr-empresa {
