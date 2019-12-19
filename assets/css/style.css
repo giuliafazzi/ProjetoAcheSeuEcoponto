@@ -625,9 +625,13 @@ body.adminbody .main-sidebar.left {
   margin-right: 0;
 }
 
-#sidebar-menu > ul > li > a.active {
+#sidebar-menu > ul > li.active {
   color: #ffffff !important;
-  background-color: #6194c1;
+  background-color: #6194c1 !important;
+}
+
+#sidebar-menu > ul > li.active a {
+  color: #ffffff !important;
 }
 
 #imgLogo img {
@@ -811,7 +815,7 @@ body.adminbody .main-sidebar.left {
 #main.enlarged .user-detail p span {
   display: none;
 }
-#main.enlarged #sidebar-menu ul ul li.active a {
+#main.enlarged #sidebar-menu ul ul li.active {
   color: #0f9df7;
 }
 
