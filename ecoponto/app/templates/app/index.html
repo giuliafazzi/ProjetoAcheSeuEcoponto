@@ -161,7 +161,7 @@
 																	Selecione os materiais que deseja buscar.
 																	Use a pesquisa para encontrá-los mais facilmente.
 																	<hr/>
-																	<select class="form-control select2" id="example2" name="state][]" multiple="multiple">
+																	<select class="form-control select2" id="example2" name="state][]" multiple="multiple" onclick="filtrar();">
 																		{% for m in materiais %}
 																		<option>{{ m.material }}</option>
 																		{% endfor %}
@@ -208,19 +208,19 @@
 																	Mais de uma opção pode ser marcada.
 																	<hr/>
 																	<label for="cbComprar" class="btn btn-primary material" id="lbComprar">Comprar
-																		<input type="checkbox" id="cbComprar" class="check-filter">
+																		<input type="checkbox" id="cbComprar" onclick="filtrar();" class="check-filter">
 																	</label>
 												
 																	<label for="cbVender" class="btn btn-primary material" id="lbVender">Vender
-																		<input type="checkbox" id="cbVender" class="check-filter">
+																		<input type="checkbox" id="cbVender" onclick="filtrar();" class="check-filter">
 																	</label>
 												
 																	<label for="cbDoar" class="btn btn-primary material" id="lbDoar">Doar
-																		<input type="checkbox" id="cbDoar" class="check-filter">
+																		<input type="checkbox" id="cbDoar" onclick="filtrar();" class="check-filter">
 																	</label>
 												
 																	<label for="cbColetar" class="btn btn-primary material" id="lbColetar">Coletar
-																		<input type="checkbox" id="cbColetar" class="check-filter">
+																		<input type="checkbox" id="cbColetar" onclick="filtrar();" class="check-filter">
 																	</label>
 																</div>
 															</div>
@@ -610,13 +610,16 @@
 					infoWindow.open(map, marker);
 				});
 
-				codeAddress(geocoder, map);
+				/*codeAddress(geocoder, map);*/
 			}
 		});
 
-		function codeAddress(geocoder, map) {
-			var address = "Av. Dr. Armando Pannunzio, 1893 - Sorocaba/SP";
-				geocoder.geocode({ 'address': address }, function (results, status) {
+		function codeAddress(map, endr) {
+			var address = endr;
+				
+					var geocoder = new google.maps.Geocoder();
+
+					geocoder.geocode({ 'address': address }, function (results, status) {
 					if (status === 'OK') {
 						var marker = new google.maps.Marker({
 							map: map,
@@ -628,6 +631,33 @@
 					}
 				});
 			}
+
+
+		// FILTRAR EMPRESAS
+		 function filtrar() {
+			 var dado = [];
+			 var filtr_material = $("#example2").select2('val');
+			 
+			 // receber a lista de dados
+			 "{% for e in empresas %}"
+			 empresa = {
+				 nome: "{{ e.nome }}",
+				 cnpj: "{{ e.cnpj }}",
+				 endereco: "{{ e.endereco }}"
+			 };
+			 "{% for m in e.materiais.all %}"
+			 alert(m);
+				if (filtr_material.includes("{{ m }}")) {
+					alert("oi");
+				}
+			 "{% endfor %}"
+			 console.log(empresa.materiais);
+			 dado.push(empresa);
+			 codeAddress(map, empresa.endereco);
+			 "{% endfor %}"
+		 }
+		 
+
 	</script>
 
 </body>
