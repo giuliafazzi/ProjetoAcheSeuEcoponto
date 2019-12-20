@@ -119,15 +119,6 @@
 										<!-- lista -->
 										<div class="card-body" id="cardList">
 										
-											<div class="card cr-empresa" style="width: 20rem;">
-												<div class="card-body">
-													<h4 class="card-title">Nome da Empresa</h4>
-													<h6 class="card-subtitle mb-2 text-muted">Endereço</h6>
-													<p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-														card's content.</p>
-												</div>
-											</div>
-										
 										</div><!-- end card-->
 								</div>
 							
@@ -614,7 +605,7 @@
 			}
 		});
 
-		function codeAddress(map, endr) {
+		function codeAddress(map, endr, zerar) {
 			var address = endr;
 				
 					var geocoder = new google.maps.Geocoder();
@@ -626,6 +617,7 @@
 							position: results[0].geometry.location,
 							icon: "{% static "images/pin.png" %}"
 						});
+
 					} else {
 						alert('Geocode was not successful for the following reason: ' + status);
 					}
@@ -644,16 +636,32 @@
 			empresa = {
 				nome: "{{ e.nome }}",
 				cnpj: "{{ e.cnpj }}",
-				endereco: "{{ e.endereco }}"
+				endereco: "{{ e.endereco }}",
+				email: "{{ e.email }}",
+				telefone: "{{ e.telefone }}"
 			};
 			"{% for m in e.materiais.all %}"
-			if (filtr_material.includes("{{ m.material }}") && achou == false) {
+			if (filtr_material != null && filtr_material.includes("{{ m.material }}") && achou == false) {
 				dado.push(empresa);
 				codeAddress(map, empresa.endereco);
 				achou = true;
+				
 			}
 			"{% endfor %}"
 			"{% endfor %}"
+
+			var cardList = $('#cardList');
+			cardList.empty();
+
+			dado.map(el => {
+				cardList.append('<div class="card cr-empresa" style="width: 20rem;">' + 
+								'<div class="card-body">' +
+								`<h4 class="card-tile"> ${el.nome}</h4>` +
+								`<h6 class="card-subtitle mb-2 text-muted"> ${el.endereco}</h6>` +
+								`<p class="card-text">Contato: ${el.email} e ${el.$}</p>` +
+								'</div>' +
+								'</div>');
+			});
 		 }
 		 
 
