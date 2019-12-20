@@ -28,4 +28,4 @@ class Empresa_Material(models.Model):
 
 class Certificado(models.Model):
     certificacao = models.CharField(max_length=80, null=False)
-    empresas = models.ManyToManyField(Empresa)
+    empresas = models.ManyToManyField(Empresa, related_name='certificados')
