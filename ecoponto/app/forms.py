@@ -1,5 +1,5 @@
 from django import forms
-from models import Empresa, Material, Certificado
+from app.models import Empresa, Material, Certificado
 
 class EmpresaForm(forms.ModelForm):
     class Meta:
