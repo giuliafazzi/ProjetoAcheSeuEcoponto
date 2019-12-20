@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from app.models import Empresa, Material, Certificado
-from app.forms import EmpresaForm
+from app.forms import EmpresaForm, MaterialForm, CertificadoForm
 
 def IndexView(request):
     empresas = Empresa.objects.all()
@@ -50,7 +50,6 @@ def EmpresaView(request):
 
         if form.is_valid():
             empresa = form.save()
-
             return redirect('app:admin')
 
     empresas = Empresa.objects.all()
@@ -108,3 +107,22 @@ def AdminView(request):
     }
 
     return render(request=request, template_name='app/admin.html', context=context)
+
+
+def MaterialCreateView(request):
+    if request.method == 'POST':
+        form = MaterialForm(request.POST)
+
+        if form.is_valid():
+            material = form.save()
+    
+    return redirect('app:admin')
+
+def CertificadoCreateView(request):
+    if request.method == 'POST':
+        form = CertificadoForm(request.POST)
+
+        if form.is_valid():
+            certificado = form.save()
+    
+    return redirect('app:admin')
