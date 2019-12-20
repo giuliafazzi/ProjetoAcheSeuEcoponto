@@ -92,7 +92,6 @@ def ContatoView(request):
 
     return render(request=request, template_name='app/contato.html', context=context)
 
-
 def AdminView(request):
     empresas = Empresa.objects.all()
     materiais = Material.objects.all()
@@ -117,6 +116,7 @@ def MaterialCreateView(request):
             material = form.save()
     
     return redirect('app:admin')
+
 
 def CertificadoCreateView(request):
     if request.method == 'POST':
