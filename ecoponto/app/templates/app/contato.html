@@ -1,58 +1,40 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Pike Admin - Free Bootstrap 4 Admin Template</title>
-    <meta
-      name="description"
-      content="Free Bootstrap 4 Admin Theme | Pike Admin"
-    />
-    <meta
-      name="author"
-      content="Pike Web Development - https://www.pikephp.com"
-    />
+    <title>Portal AcheSeuEcoponto</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+    <link href="{% static "css/select2.min.css" %}" rel="stylesheet"
+    type="text/css" />
+    <script src="{% static 'js/select2.min.js' %}"></script>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <link rel="shortcut icon" href="{% static "images/favicon.ico" %}">
 
     <!-- Bootstrap CSS -->
-    <link
-      href="assets/css/bootstrap.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet"
+    type="text/css" />
 
     <!-- Font Awesome CSS -->
-    <link
-      href="assets/font-awesome/css/font-awesome.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href="{% static "font-awesome/css/font-awesome.min.css" %}"
+    rel="stylesheet" type="text/css" />
 
     <!-- Custom CSS -->
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css"
+    />
 
     <!-- BEGIN CSS for this page -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"
-    />
+    <link href="{% static "css/dataTables.bootstrap4.min.css" %}"
+    rel="stylesheet" type="text/css" />
     <!-- END CSS for this page -->
 
     <!--Plugin CSS file with desired skin-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"
-    />
+    <link href="{% static "css/ion.rangeSlider.min.css" %}" rel="stylesheet"
+    type="text/css" />
   </head>
 
   <body class="adminbody">
@@ -63,57 +45,50 @@
           <div id="sidebar-menu">
             <ul>
               <li class="submenu" id="imgLogo">
-                <a href="index.html">
-                  <img src="assets/images/logo.png" />
+                <a href="#">
+                  <img src="{% static "images/logo.png" %}" />
                 </a>
               </li>
 
               <hr />
 
               <li class="submenu">
-                <a href="index.html"
+                <a href="{% url 'app:index' %}"
                   ><i class="fa fa-fw fa-search"></i
                   ><span> Buscar empresas </span>
                 </a>
               </li>
 
               <li class="submenu">
-                <a href="ecopontos.html"
+                <a href="{% url 'app:ecopontos' %}"
                   ><i class="fa fa-fw fa-thumb-tack"></i>
                   <span> Buscar Ecopontos </span></a
                 >
               </li>
 
               <li class="submenu">
-                <a href="sobre.html"
+                <a href="{% url 'app:sobre' %}"
                   ><i class="fa fa-fw fa-user-circle"></i>
                   <span> Quem somos </span></a
                 >
               </li>
 
               <li class="submenu">
-                <a href="#"
-                  ><i class="fa fa-fw fa-list-alt"></i>
-                  <span> Materiais </span></a
-                >
-              </li>
-
-              <li class="submenu">
-                <a href="empresa.html"
+                <a href="{% url 'app:empresa' %}"
                   ><i class="fa fa-fw fa-bullhorn"></i>
                   <span> Cadastre sua empresa </span></a
                 >
               </li>
 
               <li class="submenu">
-                <a href="duvidas.html"
+                <a href="{% url 'app:duvidas' %}"
                   ><i class="fa fa-fw fa-question-circle"></i>
                   <span> Dúvidas frequentes </span></a
                 >
               </li>
 
               <li class="active submenu">
-                <a href="contato.html"
+                <a href="{% url 'app:contato' %}"
                   ><i class="fa fa-fw fa-comments"></i>
                   <span> Contato </span></a
                 >
@@ -192,16 +167,16 @@
     </div>
     <!-- END main -->
 
-    <script src="assets/js/modernizr.min.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/moment.min.js"></script>
+    <script src="{% static 'js/modernizr.min.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/moment.min.js' %}"></script>
 
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
-    <script src="assets/js/detect.js"></script>
-    <script src="assets/js/fastclick.js"></script>
-    <script src="assets/js/jquery.blockUI.js"></script>
-    <script src="assets/js/jquery.nicescroll.js"></script>
+    <script src="{% static 'js/detect.js' %}"></script>
+    <script src="{% static 'js/fastclick.js' %}"></script>
+    <script src="{% static 'js/jquery.blockUI.js' %}"></script>
+    <script src="{% static 'js/jquery.nicescroll.js' %}"></script>
   </body>
 </html>

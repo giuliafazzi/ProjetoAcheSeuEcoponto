@@ -63,57 +63,50 @@
           <div id="sidebar-menu">
             <ul>
               <li class="submenu" id="imgLogo">
-                <a href="index.html">
-                  <img src="assets/images/logo.png" />
+                <a href="#">
+                  <img src="{% static "images/logo.png" %}" />
                 </a>
               </li>
 
               <hr />
 
               <li class="submenu">
-                <a href="index.html"
+                <a href="{% url 'app:index' %}"
                   ><i class="fa fa-fw fa-search"></i
                   ><span> Buscar empresas </span>
                 </a>
               </li>
 
               <li class="submenu">
-                <a href="ecopontos.html"
+                <a href="{% url 'app:ecopontos' %}"
                   ><i class="fa fa-fw fa-thumb-tack"></i>
                   <span> Buscar Ecopontos </span></a
                 >
               </li>
 
               <li class="submenu">
-                <a href="sobre.html"
+                <a href="{% url 'app:sobre' %}"
                   ><i class="fa fa-fw fa-user-circle"></i>
                   <span> Quem somos </span></a
                 >
               </li>
 
               <li class="submenu">
-                <a href="#"
-                  ><i class="fa fa-fw fa-list-alt"></i>
-                  <span> Materiais </span></a
-                >
-              </li>
-
-              <li class="submenu">
-                <a href="empresa.html"
+                <a href="{% url 'app:empresa' %}"
                   ><i class="fa fa-fw fa-bullhorn"></i>
                   <span> Cadastre sua empresa </span></a
                 >
               </li>
 
               <li class="submenu">
-                <a href="duvidas.html"
+                <a href="{% url 'app:duvidas' %}"
                   ><i class="fa fa-fw fa-question-circle"></i>
                   <span> Dúvidas frequentes </span></a
                 >
               </li>
 
               <li class="submenu">
-                <a href="contato.html"
+                <a href="{% url 'app:contato' %}"
                   ><i class="fa fa-fw fa-comments"></i>
                   <span> Contato </span></a
                 >
@@ -268,19 +261,41 @@
                           </div>
                           <div class="form-row">
                             <div class="form-group col-md-4">
-                              <input type="text" class="form-control" id="inputCnpj" placeholder="CNPJ" autocomplete="off" />
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="inputCnpj"
+                                placeholder="CNPJ"
+                                autocomplete="off"
+                              />
                             </div>
-                          
+
                             <div class="form-group col-md-4">
-                              <input type="tel" class="form-control" id="inputTelefone" placeholder="Telefone" />
+                              <input
+                                type="tel"
+                                class="form-control"
+                                id="inputTelefone"
+                                placeholder="Telefone"
+                              />
                             </div>
                             <div class="form-group col-md-4">
-                              <input type="email" class="form-control" id="inputEmail" placeholder="E-mail" />
+                              <input
+                                type="email"
+                                class="form-control"
+                                id="inputEmail"
+                                placeholder="E-mail"
+                              />
                             </div>
                           </div>
                           <div class="form-row">
                             <div class="form-group col-md-12">
-                              <input type="text" class="form-control" id="inputEndereco" placeholder="Endereço da empresa" autocomplete="off" />
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="inputEndereco"
+                                placeholder="Endereço da empresa"
+                                autocomplete="off"
+                              />
                             </div>
                           </div>
 
@@ -293,7 +308,6 @@
                     </div>
                   </div>
                   <!-- end row -->
-                  
                 </form>
               </div>
             </div>
