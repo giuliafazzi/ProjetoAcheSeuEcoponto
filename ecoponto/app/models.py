@@ -4,7 +4,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 # Create your models here.
 
 class Empresa(models.Model):
-    cnpj = models.CharField(max_length=14, null=False, primary_key=True)
+    cnpj = models.CharField(max_length=18, null=False, primary_key=True)
     nome = models.CharField(max_length=80, null=False)
     endereco = models.CharField(max_length=100)
     telefone = models.CharField(max_length=14)

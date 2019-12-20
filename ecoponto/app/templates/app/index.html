@@ -635,26 +635,25 @@
 
 		// FILTRAR EMPRESAS
 		 function filtrar() {
-			 var dado = [];
-			 var filtr_material = $("#example2").select2('val');
-			 
-			 // receber a lista de dados
-			 "{% for e in empresas %}"
-			 empresa = {
-				 nome: "{{ e.nome }}",
-				 cnpj: "{{ e.cnpj }}",
-				 endereco: "{{ e.endereco }}"
-			 };
-			 "{% for m in e.materiais.all %}"
-			 alert(m);
-				if (filtr_material.includes("{{ m }}")) {
-					alert("oi");
-				}
-			 "{% endfor %}"
-			 console.log(empresa.materiais);
-			 dado.push(empresa);
-			 codeAddress(map, empresa.endereco);
-			 "{% endfor %}"
+			var dado = [];
+			var filtr_material = $("#example2").select2('val');
+			var achou = false;
+
+			// receber a lista de dados
+			"{% for e in empresas %}"
+			empresa = {
+				nome: "{{ e.nome }}",
+				cnpj: "{{ e.cnpj }}",
+				endereco: "{{ e.endereco }}"
+			};
+			"{% for m in e.materiais.all %}"
+			if (filtr_material.includes("{{ m.material }}") && achou == false) {
+				dado.push(empresa);
+				codeAddress(map, empresa.endereco);
+				achou = true;
+			}
+			"{% endfor %}"
+			"{% endfor %}"
 		 }
 		 
 
