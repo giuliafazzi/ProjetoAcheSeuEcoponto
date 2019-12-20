@@ -13,6 +13,6 @@ urlpatterns = [
     path('duvidas/', DuvidasView, name='duvidas'),
     path('contato/', ContatoView, name='contato'),
     path('admin/', AdminView, name='admin'),
-    path('material/', MaterialCreateView, name='admin'),
+    path('material/', MaterialCreateView, name='material'),
     path('certificado/', CertificadoCreateView, name='certificado')
 ]

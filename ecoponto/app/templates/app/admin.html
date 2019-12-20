@@ -168,7 +168,9 @@
                         </div>
 
                         <div class="card-body">
-                          <form autocomplete="off" action="#"></form>
+                          <form method="post" autocomplete="off" action="{% url 'app:material' %}">
+                          {% csrf_token %}
+                          
                           <div class="form-row">
                             <div class="form-group col-md-10">
                               <input
@@ -176,7 +178,8 @@
                                 class="form-control"
                                 id="inputMaterial"
                                 placeholder="Material"
-                                autocomplete="off"
+                                autocomplete="off",
+                                name="material"
                               />
                             </div>
                             <div class="form-group col-md-2">
@@ -202,7 +205,9 @@
                         </div>
 
                         <div class="card-body">
-                          <form autocomplete="off" action="#"></form>
+                          <form method="post" autocomplete="off" action="{% url 'app:certificado' %}">
+                          {% csrf_token %}
+
                           <div class="form-row">
                             <div class="form-group col-md-10">
                               <input
@@ -210,7 +215,8 @@
                                 class="form-control"
                                 id="inputCertificação"
                                 placeholder="Certificação"
-                                autocomplete="off"
+                                autocomplete="off",
+                                name = "certificacao"
                               />
                             </div>
                             <div class="form-group col-md-2">
@@ -239,7 +245,9 @@
                         </div>
 
                         <div class="card-body">
-                          <form autocomplete="off" action="#"></form>
+                          <form method="post" autocomplete="off" action="{% url 'app:empresa' %}">
+                          {% csrf_token %}
+
                           <div class="form-row">
                             <div class="form-group col-md-12">
                               <input
@@ -247,7 +255,8 @@
                                 class="form-control"
                                 id="inputEmpresa"
                                 placeholder="Nome da empresa"
-                                autocomplete="off"
+                                autocomplete="off",
+                                name="nome"
                               />
                             </div>
                           </div>
@@ -258,7 +267,8 @@
                                 class="form-control"
                                 id="inputCnpj"
                                 placeholder="CNPJ"
-                                autocomplete="off"
+                                autocomplete="off",
+                                name="cnpj"
                               />
                             </div>
 
@@ -267,7 +277,8 @@
                                 type="tel"
                                 class="form-control"
                                 id="inputTelefone"
-                                placeholder="Telefone"
+                                placeholder="Telefone",
+                                name="telefone"
                               />
                             </div>
                             <div class="form-group col-md-4">
@@ -275,7 +286,8 @@
                                 type="email"
                                 class="form-control"
                                 id="inputEmail"
-                                placeholder="E-mail"
+                                placeholder="E-mail",
+                                name="email"
                               />
                             </div>
                           </div>
@@ -286,7 +298,8 @@
                                 class="form-control"
                                 id="inputEndereco"
                                 placeholder="Endereço da empresa"
-                                autocomplete="off"
+                                autocomplete="off",
+                                name="endereco"
                               />
                             </div>
                           </div>

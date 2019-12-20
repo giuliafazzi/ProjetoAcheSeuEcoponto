@@ -9,10 +9,10 @@ class Empresa(models.Model):
     endereco = models.CharField(max_length=100)
     telefone = models.CharField(max_length=10)
     email = models.CharField(max_length=50)
-    compra = models.BooleanField(null=False, default=False)
-    venda = models.BooleanField(null=False, default=False)
-    doacao = models.BooleanField(null=False, default=False)
-    coleta = models.BooleanField(null=False, default=False)
+    compra = models.BooleanField(null=True, default=False)
+    venda = models.BooleanField(null=True, default=False)
+    doacao = models.BooleanField(null=True, default=False)
+    coleta = models.BooleanField(null=True, default=False)
 
 
 class Material(models.Model):

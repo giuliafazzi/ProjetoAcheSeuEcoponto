@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from app.models import Empresa, Material, Certificado
 from app.forms import EmpresaForm, MaterialForm, CertificadoForm
 
@@ -6,11 +6,13 @@ def IndexView(request):
     empresas = Empresa.objects.all()
     materiais = Material.objects.all()
     certificados = Certificado.objects.all()
+    empresas_filtro = ''
     
     context = {
         'empresas': empresas,
         'materiais': materiais,
         'certificados': certificados,
+        'empresas_filtro': empresas_filtro,
     }
 
     return render(request=request, template_name='app/index.html', context=context)
@@ -47,10 +49,15 @@ def SobreView(request):
 def EmpresaView(request):
     if request.method == 'POST':
         form = EmpresaForm(request.POST)
+        print(request.POST)
 
+        print('PASSOU')
+        
         if form.is_valid():
+            print('É VALIDO')
             empresa = form.save()
-            return redirect('app:admin')
+            
+        return redirect('app:admin')
 
     empresas = Empresa.objects.all()
     materiais = Material.objects.all()
