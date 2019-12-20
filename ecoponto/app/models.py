@@ -7,7 +7,7 @@ class Empresa(models.Model):
     cnpj = models.CharField(max_length=14, null=False, primary_key=True)
     nome = models.CharField(max_length=80, null=False)
     endereco = models.CharField(max_length=100)
-    telefone = models.CharField(max_length=10)
+    telefone = models.CharField(max_length=14)
     email = models.CharField(max_length=50)
     compra = models.BooleanField(null=True, default=False)
     venda = models.BooleanField(null=True, default=False)
@@ -24,6 +24,7 @@ class Empresa_Material(models.Model):
     empresa = models.ForeignKey(Empresa, on_delete=models.CASCADE)
     material = models.ForeignKey(Material, on_delete=models.CASCADE)
     volume = models.IntegerField(validators=[MinValueValidator(1)])
+    qualidade = models.CharField(max_length=10)
 
 
 class Certificado(models.Model):
