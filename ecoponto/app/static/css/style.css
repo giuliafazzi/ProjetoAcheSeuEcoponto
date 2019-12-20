@@ -1728,6 +1728,10 @@ a.btn:focus {
   -webkit-border-radius: 1em;
 }
 
+.select2-container {
+  width: 100% !important;
+}
+
 /*
 *
 *   CARD
