@@ -73,3 +73,15 @@ def ContatoView(request):
     }
     return render(request=request, template_name='app/contato.html', context=context)
 
+def AdminView(request):
+    empresas = Empresa.objects.all()
+    materiais = Material.objects.all()
+    certificados = Certificado.objects.all()
+    
+    context = {
+        'empresas': empresas,
+        'materiais': materiais,
+        'certificados': certificados,
+    }
+    return render(request=request, template_name='app/admin.html', context=context)
+
