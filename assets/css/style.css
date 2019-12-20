@@ -1633,6 +1633,10 @@ a.btn:focus {
   content: "\f055";
 }
 
+.select2-container {
+  width: 100% !important;
+}
+
 #col_slider,
 #range_slider {
   width: 100% !important;
@@ -1726,6 +1730,7 @@ a.btn:focus {
   border-radius: 1em;
   -moz-border-radius: 1em;
   -webkit-border-radius: 1em;
+  width: 100%;
 }
 
 /*
